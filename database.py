@@ -8,7 +8,7 @@ This module queries the [API](http://ergast.com/mrd/)
 import urllib.request
 import json
 
-class DataManager:
+class ApiManager:
 
     def getSeasonList(self):
         """
@@ -243,11 +243,11 @@ class DataManager:
         print(final[0].keys())
         return final
 
-# DataManager().getSeasonList()
-# DataManager().getRaceSchedule(2012)
-# DataManager().getRaceResults(2008,5)
-# DataManager().getQualifyingResults(2008,5)
-# DataManager().getStandings(2008,5)
-# DataManager().getAllDrivers()
-# DataManager().getAllConstructors()
-DataManager().getAllCircuits()
+# ApiManager().getSeasonList()
+# ApiManager().getRaceSchedule(2012)
+# ApiManager().getRaceResults(2008,5)
+# ApiManager().getQualifyingResults(2008,5)
+# ApiManager().getStandings(2008,5)
+# ApiManager().getAllDrivers()
+# ApiManager().getAllConstructors()
+ApiManager().getAllCircuits()
