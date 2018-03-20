@@ -52,7 +52,7 @@ class ApiManager:
 
     def getRaceResults(self, referenceYear, round):
         """
-        This function fetches the results for a give race
+        This function fetches the results for a given race
 
         The resulting object will be a list. Each element of that list is a dictionary that contains a mixed of values and dictionaries.
 
@@ -241,6 +241,20 @@ class ApiManager:
             data = json.loads(response.read().decode(encoding))
         final = data['MRData']['CircuitTable']['Circuits']
         print(final[0].keys())
+        return final
+
+    def getAllResults(self):
+        """
+        This function fetches all the F1 results available. Each line is a car with its corresponding standing and all.
+
+        :return: A list of dictionaries with the keys ``url`` and ``season``. The former contains the wikipedia link for that season and the latter contains a string with the reference year.
+        """
+        url = 'http://ergast.com/api/f1/results.json'
+        with urllib.request.urlopen(url) as response:
+            encoding = response.info().get_content_charset('utf8')
+            data = json.loads(response.read().decode(encoding))
+
+        final = data['MRData']['SeasonTable']['Seasons']
         return final
 
 # ApiManager().getSeasonList()

@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/F1Model.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.ipynb_checkpoints/
+__pycache__/
+test.pkl
